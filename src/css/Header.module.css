@@ -1,0 +1,151 @@
+.header {
+  background-color: #131921;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Amazon Logo */
+.amazon_logo {
+  margin-right: 2rem;
+  padding: 0.625rem 0 0 0;
+}
+
+.logo {
+  margin: 0.625rem;
+  margin-bottom: 0;
+  margin-left: 2.4rem;
+  flex: 1;
+}
+
+.logo_img {
+  height: 3.125rem;
+  width: auto;
+  padding: 0.325rem;
+  display: inline-block;
+}
+
+.logo_nation {
+  position: absolute;
+  top: 0;
+  margin-top: 1.3rem;
+  color: white;
+  margin-left: -0.3125rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.prime_status {
+  color: #999999;
+  font-weight: bold;
+  margin-top: 2.2rem;
+  margin-left: -2.4rem;
+  position: absolute;
+  top: 0;
+  font-size: 1.2rem;
+}
+
+/* Delivery Location */
+.delivery_location {
+  display: flex;
+  color: white;
+  padding: 0 1rem 0 0;
+  text-decoration: none;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+/* Search CSS */
+.search {
+  display: flex;
+  flex: 2;
+  color: white;
+  font-weight: bold;
+  font-size: 1.6rem;
+  align-items: center;
+}
+
+.search_input {
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 0.2rem 1rem;
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+  color: #263747;
+}
+
+.search_icon {
+  background-color: #f3a847;
+  height: 2.2rem !important;
+  font-weight: bold;
+  padding: 0.3125rem;
+  width: 2.4rem !important;
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  cursor: pointer;
+}
+
+/* Navigation */
+.navigation {
+  display: flex;
+  margin-right: 2.4rem;
+  margin-left: 1rem;
+  color: white;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navigation_option {
+  cursor: pointer;
+  position: relative;
+  padding: 0 0.375rem;
+}
+
+.navigation_option:last-child {
+  margin-right: 0.625rem;
+}
+
+.flag_image {
+  width: 36px;
+  height: 36px;
+}
+
+.navigation_option_uppertext {
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.navigation_option_lowertext {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.navigation_option_cart_text {
+  margin-top: 1.2rem;
+  position: absolute;
+  top: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-left: -0.125rem;
+}
+
+.navigation_option_cart_num {
+  position: absolute;
+  top: 0;
+  margin-top: -0.375rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+  width: 75%;
+  display: inline-block;
+  color: orange;
+}
+
+.cart_icon {
+  font-size: 2rem !important;
+  margin-top: 0.25rem;
+}
