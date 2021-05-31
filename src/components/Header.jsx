@@ -4,9 +4,40 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import headercss from '../css/Header.module.css';
 
-const Header = () => {
+const Header = ({ isLoggedIn, setIsLoggedIn }) => {
+  let signInContent = (
+    <>
+      <p className={headercss.navigation_option_uppertext}>Hello, Sign in</p>
+      <p className={headercss.navigation_option_lowertext}>Guest</p>
+    </>
+  );
+
+  let signInAddress = (
+    <>
+      <p className={headercss.navigation_option_uppertext}>Hello</p>
+      <p className={headercss.navigation_option_lowertext}>
+        Select your address
+      </p>
+    </>
+  );
+
+  if (isLoggedIn) {
+    signInContent = (
+      <>
+        <p className={headercss.navigation_option_uppertext}>Welcome back</p>
+        <p className={headercss.navigation_option_lowertext}>Saurabh</p>
+      </>
+    );
+    signInAddress = (
+      <>
+        <p className={headercss.navigation_option_uppertext}>Deliver to</p>
+        <p className={headercss.navigation_option_lowertext}>Lucknow, 226016</p>
+      </>
+    );
+  }
+
   return (
-    <section className={headercss.header}>
+    <header className={headercss.header} id='#header-top'>
       <div className={headercss.amazon_logo}>
         <a href='/' className={headercss.logo}>
           <img
@@ -20,12 +51,7 @@ const Header = () => {
       </div>
       <a href='/' className={headercss.delivery_location}>
         <LocationOnIcon />
-        <div>
-          <p className={headercss.navigation_option_uppertext}>Hello</p>
-          <p className={headercss.navigation_option_lowertext}>
-            Select your address
-          </p>
-        </div>
+        <div>{signInAddress}</div>
       </a>
       <div className={headercss.search}>
         <input
@@ -49,11 +75,8 @@ const Header = () => {
             alt='USA Flag Image'
           /> */}
         </div>
-        <div className={headercss.navigation_option}>
-          <p className={headercss.navigation_option_uppertext}>
-            Hello, Sign in
-          </p>
-          <p className={headercss.navigation_option_lowertext}>Guest</p>
+        <div className={headercss.navigation_option} onClick={setIsLoggedIn}>
+          {signInContent}
         </div>
         <div className={headercss.navigation_option}>
           <p className={headercss.navigation_option_uppertext}>Returns</p>
@@ -65,7 +88,7 @@ const Header = () => {
           <span className={headercss.navigation_option_cart_text}>Cart</span>
         </div>
       </div>
-    </section>
+    </header>
   );
 };
 
