@@ -16,9 +16,7 @@ const Header = ({ isLoggedIn, setIsLoggedIn }) => {
   let signInAddress = (
     <>
       <p className={headercss.navigation_option_uppertext}>Hello</p>
-      <p className={headercss.navigation_option_lowertext}>
-        Select your address
-      </p>
+      <p className={headercss.navigation_option_lowertext}>Your location</p>
     </>
   );
 
@@ -40,7 +38,7 @@ const Header = ({ isLoggedIn, setIsLoggedIn }) => {
   return (
     <header className={headercss.header} id='#header-top'>
       <div className={headercss.amazon_logo}>
-        <a href='/' className={headercss.logo}>
+        <Link to='/' className={headercss.logo}>
           <img
             className={headercss.logo_img}
             src='http://pngimg.com/uploads/amazon/amazon_PNG11.png'
@@ -48,12 +46,12 @@ const Header = ({ isLoggedIn, setIsLoggedIn }) => {
           />
           <span className={headercss.logo_nation}>.in</span>
           <span className={headercss.prime_status}>prime</span>
-        </a>
+        </Link>
       </div>
-      <a href='/' className={headercss.delivery_location}>
+      <div className={headercss.delivery_location}>
         <LocationOnIcon />
         <div>{signInAddress}</div>
-      </a>
+      </div>
       <div className={headercss.search}>
         <input
           className={headercss.search_input}

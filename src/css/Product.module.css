@@ -1,4 +1,10 @@
-.products {
+.main_heading {
+  font-size: 2rem;
+  background-color: white;
+  text-align: center;
+  padding: 2rem;
+  margin: 1rem 1rem;
+  text-transform: uppercase;
 }
 
 .product_row {
@@ -74,4 +80,10 @@
   background-color: var(--search-icon-bgcolor);
   color: white;
   font-weight: bold;
+}
+
+.btnadd button:hover,
+.btnadd button:focus,
+.btnadd button:active {
+  background-color: var(--header-bgcolor);
 }

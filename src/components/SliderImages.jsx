@@ -1,6 +1,6 @@
 import React from 'react';
 import AliceCarousel from 'react-alice-carousel';
-import slidercss from '../../css/home/SliderImages.module.css';
+import slidercss from '../css/SliderImages.module.css';
 import 'react-alice-carousel/lib/alice-carousel.css';
 
 const SliderImages = () => {

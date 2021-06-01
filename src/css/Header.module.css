@@ -63,7 +63,7 @@
   display: -ms-flexbox;
   display: flex;
   color: var(--header-font-color);
-  padding: 0 1rem 0 0;
+  padding: 0.2rem 1rem 0.2rem 0;
   text-decoration: none;
   -webkit-box-align: end;
   -ms-flex-align: end;
@@ -71,6 +71,7 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  margin-right: 1rem;
 }
 
 /* Search CSS */
@@ -128,12 +129,24 @@
 .navigation_option {
   cursor: pointer;
   position: relative;
-  padding: 0 0.375rem;
+  padding: 0.2rem 0.375rem;
   color: white !important;
+}
+
+.navigation_option:focus,
+.navigation_option:hover,
+.navigation_option:active {
+  outline: 1px solid gainsboro;
 }
 
 .navigation_option:last-child {
   margin-right: 0.625rem;
+  padding: 0 0.375rem;
+}
+.navigation_option:last-child:focus,
+.navigation_option:last-child:hover,
+.navigation_option:last-child:active {
+  outline: none;
 }
 
 .flag_image {
