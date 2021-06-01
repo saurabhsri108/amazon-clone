@@ -17,5 +17,11 @@ html {
 }
 
 body {
-  background-color: white;
+  background-color: #eaeded;
+}
+
+.alice-carousel {
+  width: 100%;
+  z-index: -1;
+  margin-bottom: -9.375rem;
 }

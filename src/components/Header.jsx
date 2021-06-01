@@ -3,6 +3,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import headercss from '../css/Header.module.css';
+import { Link } from 'react-router-dom';
 
 const Header = ({ isLoggedIn, setIsLoggedIn }) => {
   let signInContent = (
@@ -82,11 +83,11 @@ const Header = ({ isLoggedIn, setIsLoggedIn }) => {
           <p className={headercss.navigation_option_uppertext}>Returns</p>
           <p className={headercss.navigation_option_lowertext}>&amp; Orders</p>
         </div>
-        <div className={headercss.navigation_option}>
+        <Link to='/cart' className={headercss.navigation_option}>
           <span className={headercss.navigation_option_cart_num}>0</span>
           <ShoppingCartIcon className={headercss.cart_icon} />
           <span className={headercss.navigation_option_cart_text}>Cart</span>
-        </div>
+        </Link>
       </div>
     </header>
   );
