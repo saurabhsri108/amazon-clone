@@ -5,14 +5,14 @@ import AcerProducts from './AcerProducts';
 import HPProducts from './HPProducts';
 import AppleProducts from './AppleProducts';
 
-const Products = ({ storePoint }) => {
+const Products = ({storePoint}) => {
   return (
-    <section className={productcss.products}>
-      {storePoint === 'asus' && <AsusProducts />}
-      {storePoint === 'acer' && <AcerProducts />}
-      {storePoint === 'hp' && <HPProducts />}
-      {storePoint === 'apple' && <AppleProducts />}
-    </section>
+      <section className={productcss.products}>
+        {storePoint === 'asus' && <AsusProducts/>}
+        {storePoint === 'acer' && <AcerProducts/>}
+        {storePoint === 'hp' && <HPProducts/>}
+        {storePoint === 'apple' && <AppleProducts/>}
+      </section>
   );
 };
 

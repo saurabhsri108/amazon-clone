@@ -1,19 +1,19 @@
 :root {
-  /* Colors */
-  --header-font-color: white;
-  --footer-font-color: white;
-  --prime-color: #999999;
-  --search-input-color: #263747;
-  --cart-num-color: orange;
-  --nav-link-color: white;
+	/* Colors */
+	--header-font-color        : white;
+	--footer-font-color        : white;
+	--prime-color              : #999999;
+	--search-input-color       : #263747;
+	--cart-num-color           : orange;
+	--nav-link-color           : white;
 
-  /* Background-colors */
-  --header-bgcolor: #131921;
-  --footer-top-bgcolor: #37475a;
-  --footer-top-hover-bgcolor: #485769;
-  --footer-middle-bgcolor: #232f3e;
-  --footer-bottom-bgcolor: #131a22;
-  --search-icon-bgcolor: #f3a847;
+	/* Background-colors */
+	--header-bgcolor           : #131921;
+	--footer-top-bgcolor       : #37475a;
+	--footer-top-hover-bgcolor : #485769;
+	--footer-middle-bgcolor    : #232f3e;
+	--footer-bottom-bgcolor    : #131a22;
+	--search-icon-bgcolor      : #f3a847;
 
-  /* Font sizes */
+	/* Font sizes */
 }
