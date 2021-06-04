@@ -4,61 +4,61 @@ import productcss from '../css/Product.module.css';
 
 const AcerProducts = () => {
   return (
-      <>
-        <h1 className={productcss.main_heading}>Acer Laptops</h1>
-        <div className={productcss.product_row}>
-          <Product
-              name='ACER ROG Zephyrus G14 (2021), 14" (35.56 cms) FHD 144Hz, Ryzen 7 5800HS, RTX 3060 6GB Graphics, Gaming Laptop (16GB/1TB SSD/Office 2019/Windows 10/Moonlight White/AniMe Matrix/1.7 Kg), GA401QM-HZ146TS'
-              currency="₹"
-              amount="1,41,990.00"
-              ratings={3}
-              image="https://m.media-amazon.com/images/I/81Nwu5Hp0jS._AC_SX615_SY462_.jpg"
-              buttonText="Add to Cart"
-          />
-          <Product
-              name='ACER ROG Zephyrus G14 (2021), 14" (35.56 cms) FHD 144Hz, Ryzen 7 5800HS, GTX 1650 4GB Graphics, Gaming Laptop (8GB/512GB SSD/Office 2019/Windows 10/Moonlight White/AniMe Matrix/1.6 Kg), GA401QH-BM070TS'
-              currency="₹"
-              amount="94,990.00"
-              ratings={5}
-              image="https://m.media-amazon.com/images/I/81Nwu5Hp0jS._AC_SX615_SY462_.jpg"
-              buttonText="Add to Cart"
-          />
-          <Product
-              name='ACER ROG Zephyrus G14 (2021), 14" (35.56 cms) FHD 144Hz, Ryzen 9 5900HS, RTX 3060 6GB Graphics, Gaming Laptop (16GB/1TB SSD/Office 2019/Windows 10/Moonlight White/AniMe Matrix/1.7 Kg), GA401QM-HZ269TS'
-              currency="₹"
-              amount="1,50,990.00"
-              ratings={4}
-              image="https://m.media-amazon.com/images/I/81Nwu5Hp0jS._AC_SX615_SY462_.jpg"
-              buttonText="Add to Cart"
-          />
-        </div>
-        <div className={productcss.product_row}>
-          <Product
-              name='ACER ROG Zephyrus G14 (2021), 14" (35.56 cms) FHD 144Hz, Ryzen 7 5800HS, RTX 3060 6GB Graphics, Gaming Laptop (16GB/1TB SSD/Office 2019/Windows 10/Eclipse Gray/AniMe Matrix/1.7 Kg), GA401QM-HZ146TS'
-              currency="₹"
-              amount="1,41,990.00"
-              ratings={3}
-              image="https://m.media-amazon.com/images/I/81rOuSWZtvL._AC_SX615_SY462_.jpg"
-              buttonText="Add to Cart"
-          />
-          <Product
-              name='ACER ROG Zephyrus G14 (2021), 14" (35.56 cms) FHD 144Hz, Ryzen 7 5800HS, GTX 1650 4GB Graphics, Gaming Laptop (8GB/512GB SSD/Office 2019/Windows 10/Eclipse Gray/AniMe Matrix/1.6 Kg), GA401QH-BM070TS'
-              currency="₹"
-              amount="94,990.00"
-              ratings={5}
-              image="https://m.media-amazon.com/images/I/81rOuSWZtvL._AC_SX615_SY462_.jpg"
-              buttonText="Add to Cart"
-          />
-          <Product
-              name='ACER ROG Zephyrus G14 (2021), 14" (35.56 cms) FHD 144Hz, Ryzen 9 5900HS, RTX 3060 6GB Graphics, Gaming Laptop (16GB/1TB SSD/Office 2019/Windows 10/Eclipse Gray/AniMe Matrix/1.7 Kg), GA401QM-HZ269TS'
-              currency="₹"
-              amount="1,50,990.00"
-              ratings={4}
-              image="https://m.media-amazon.com/images/I/81rOuSWZtvL._AC_SX615_SY462_.jpg"
-              buttonText="Add to Cart"
-          />
-        </div>
-      </>
+    <>
+      <h1 className={productcss.main_heading}>Acer Laptops</h1>
+      <div className={productcss.product_row}>
+        <Product
+          name='Acer Nitro 5 Intel Core i5-10th Gen 15.6-inch (39.62 cms) Display T&L Gaming Laptop (8GB Ram/1TB HDD + 256GB SSD/Win10/GTX 1650Ti Graphics/Obsidian Black/2.3 Kgs), AN515-55 + Xbox Game Pass for PC'
+          currency='₹'
+          amount='64,990.00'
+          ratings={5}
+          image='https://images-na.ssl-images-amazon.com/images/I/81mxlt2J81L._SL1500_.jpg'
+          buttonText='Add to Cart'
+        />
+        <Product
+          name='Acer Nitro 5 Intel Core i7 10750H 15.6" FHD IPS 144Hz Display Thin and Light Gaming Laptop (8GB Ram/1TB HDD + 256 GB SSD/Windows 10 Home /GTX 1650Ti Graphics/Obisidian Black/2.3 kgs),AN515-55'
+          currency='₹'
+          amount='99,900.00'
+          ratings={5}
+          image='https://images-na.ssl-images-amazon.com/images/I/71Pp8PLPNAL._SL1500_.jpg'
+          buttonText='Add to Cart'
+        />
+        <Product
+          name='Acer Predator Triton Intel i5 10th Gen 15.6" (39.62cms) FHD IPS 144 Hz Display Full Metal Thin & Light Gaming Laptop (8GB RAM/512GB SSD/Win10/GTX 1650Ti Graphics/19.9mm Thin/Abyssal Black), PT315-52'
+          currency='₹'
+          amount='76,990.00'
+          ratings={4}
+          image='https://images-na.ssl-images-amazon.com/images/I/81EiTAEiBxL._SL1500_.jpg'
+          buttonText='Add to Cart'
+        />
+      </div>
+      <div className={productcss.product_row}>
+        <Product
+          name='Acer Aspire 7 Core i5 9th Gen - (8 GB/512 GB SSD/Windows 10 Home/4 GB Graphics/NVIDIA GeForce GTX 1650 Ti) A715-75G-51H8 Gaming Laptop (15.6 inch, Charcoal Black, 2.15 kg)'
+          currency='₹'
+          amount='55,990.00'
+          ratings={3}
+          image='https://images-na.ssl-images-amazon.com/images/I/418WSiz8uzL.jpg'
+          buttonText='Add to Cart'
+        />
+        <Product
+          name='Acer Nitro 5 Intel Core i5-11th Generation 144 Hz Refresh Rate 15.6-inch (39.62 cms) Gaming Laptop (8GB Ram/512 GB SSD/Win10/GTX 1650 Graphics/Obsidian Black/2.2 Kgs), AN515-56 + Xbox Game Pass for PC'
+          currency='₹'
+          amount='69,990.00'
+          ratings={5}
+          image='https://images-na.ssl-images-amazon.com/images/I/71evs2WKJjS._SL1500_.jpg'
+          buttonText='Add to Cart'
+        />
+        <Product
+          name='Acer Nitro 5 Intel Core i5-10th Gen 15.6-inch (39.62 cms) 144 Hz Refresh Rate Gaming Laptop (8GB RAM/RTX 3060 Graphics/1TB HDD + 256GB SSD/Windows 10/Obsidian Black/2.3 Kgs), AN515-55'
+          currency='₹'
+          amount='89,990.00'
+          ratings={4}
+          image='https://images-na.ssl-images-amazon.com/images/I/81359Qk1QzL._SL1500_.jpg'
+          buttonText='Add to Cart'
+        />
+      </div>
+    </>
   );
 };
 

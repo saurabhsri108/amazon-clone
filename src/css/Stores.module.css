@@ -1,69 +1,69 @@
 .store_row {
-	display           : -webkit-box;
-	display           : -ms-flexbox;
-	display           : flex;
-	-webkit-box-align : center;
-	-ms-flex-align    : center;
-	align-items       : center;
-	-webkit-box-pack  : space-evenly;
-	-ms-flex-pack     : space-evenly;
-	justify-content   : space-evenly;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
 }
 
 .store {
-	background-color      : white;
-	margin                : 1rem;
-	padding               : 1rem;
-	display               : -webkit-box;
-	display               : -ms-flexbox;
-	display               : flex;
-	-webkit-box-orient    : vertical;
-	-webkit-box-direction : normal;
-	-ms-flex-direction    : column;
-	flex-direction        : column;
-	-webkit-box-pack      : center;
-	-ms-flex-pack         : center;
-	justify-content       : center;
-	-webkit-box-align     : center;
-	-ms-flex-align        : center;
-	align-items           : center;
-	color                 : var(--prime-color);
+  background-color: white;
+  margin: 1rem;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: var(--prime-color);
 }
 
 .store_row a {
-	text-decoration    : none;
-	color              : inherit;
-	-webkit-transition : all 0.2s ease-in-out;
-	-o-transition      : all 0.2s ease-in-out;
-	transition         : all 0.2s ease-in-out;
-	border             : none;
+  text-decoration: none;
+  color: inherit;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  border: none;
 }
 
 .store_row a:hover,
 .store_row a:focus {
-	-webkit-transform : scale(1.014);
-	-ms-transform     : scale(1.014);
-	transform         : scale(1.014);
+  -webkit-transform: scale(1.014);
+  -ms-transform: scale(1.014);
+  transform: scale(1.014);
 }
 
 .info {
-	margin-bottom : 1rem;
+  margin-bottom: 1rem;
 }
 
 .heading {
-	font-size     : 2rem;
-	margin-bottom : 0.625rem;
-	font-weight   : bold;
+  font-size: 2rem;
+  margin-bottom: 0.625rem;
+  font-weight: bold;
 }
 
 .img_container {
-	margin-bottom : 1rem;
+  margin-bottom: 1rem;
 }
 
 .img_container img {
-	width : 100%;
+  width: 100%;
 }
 
 .btnadd {
-	text-align : center;
+  text-align: center;
 }

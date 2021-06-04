@@ -1,87 +1,87 @@
 .footer {
-	background-color : var(--footer-bgcolor);
-	color            : var(--footer-font-color);
+  background-color: var(--footer-bgcolor);
+  color: var(--footer-font-color);
 }
 
 .top {
-	background-color : var(--footer-top-bgcolor);
-	text-align       : center;
-	font-size        : 0.8rem;
-	font-weight      : 600;
-	padding          : 1rem;
-	display          : block;
-	color            : var(--nav-link-color);
-	text-decoration  : none;
+  background-color: var(--footer-top-bgcolor);
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 1rem;
+  display: block;
+  color: var(--nav-link-color);
+  text-decoration: none;
 }
 
 .top:hover,
 .top:active,
 .top:focus {
-	background-color : var(--footer-top-hover-bgcolor);
+  background-color: var(--footer-top-hover-bgcolor);
 }
 
 .middle {
-	background-color   : var(--footer-middle-bgcolor);
-	display            : -webkit-box;
-	display            : -ms-flexbox;
-	display            : flex;
-	-ms-flex-pack      : distribute;
-	-webkit-box-pack   : space-evenly;
-	justify-content    : space-evenly;
-	-ms-flex-line-pack : center;
-	align-content      : center;
-	gap                : 2rem;
-	padding            : 4rem 16rem;
+  background-color: var(--footer-middle-bgcolor);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  -webkit-box-pack: space-evenly;
+  justify-content: space-evenly;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  gap: 2rem;
+  padding: 4rem 16rem;
 }
 
 .middle div {
-	display               : -webkit-box;
-	display               : -ms-flexbox;
-	display               : flex;
-	-webkit-box-orient    : vertical;
-	-webkit-box-direction : normal;
-	-ms-flex-direction    : column;
-	flex-direction        : column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .middle p {
-	font-weight   : 600;
-	margin-bottom : 0.3125rem;
+  font-weight: 600;
+  margin-bottom: 0.3125rem;
 }
 
 .middle a {
-	color           : var(--nav-link-color);
-	text-decoration : none;
-	font-size       : 0.8rem;
-	padding         : 0.5rem 0 0;
+  color: var(--nav-link-color);
+  text-decoration: none;
+  font-size: 0.8rem;
+  padding: 0.5rem 0 0;
 }
 
 .middle a:hover,
 .middle a:focus,
 .middle a:active {
-	text-decoration : underline;
+  text-decoration: underline;
 }
 
 .bottom {
-	background-color : var(--footer-bottom-bgcolor);
-	display          : -webkit-box;
-	display          : -ms-flexbox;
-	display          : flex;
-	gap              : 2rem;
-	-webkit-box-pack : center;
-	-ms-flex-pack    : center;
-	justify-content  : center;
-	font-size        : 0.7rem;
-	padding          : 1rem 0 1.4rem;
+  background-color: var(--footer-bottom-bgcolor);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  padding: 1rem 0 1.4rem;
 }
 
 .bottom a {
-	color           : var(--nav-link-color);
-	text-decoration : none;
+  color: var(--nav-link-color);
+  text-decoration: none;
 }
 
 .bottom a:hover,
 .bottom a:active,
 .bottom a:focus {
-	text-decoration : underline;
+  text-decoration: underline;
 }
