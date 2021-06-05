@@ -9,16 +9,16 @@ const ShoppingCarts = ({ showSubtotal }) => {
       <p className={cartcss.prices}>Prices</p>
       <div className={cartcss.item_list}>
         <div className={cartcss.item_list_img}>
-          <Link to='/'>
+          <Link to='/products/single-product'>
             <img
               src='https://m.media-amazon.com/images/I/719ZywAmvOL._AC_AA180_.jpg'
-              alt=''
+              alt='Product Image'
             />
           </Link>
         </div>
         <div className={cartcss.item_list_content}>
           <div className={cartcss.item_list_content_details}>
-            <Link to='/'>
+            <Link to='/products/single-product'>
               <h3>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi,
                 voluptatibus?

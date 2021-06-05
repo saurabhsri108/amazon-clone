@@ -14,7 +14,7 @@ const Cart = ({ items }) => {
             <div className={cartcss.empty}>
               <div className={cartcss.item_list}>
                 <div className={cartcss.item_list_img}>
-                  <Link to='/'>
+                  <Link to='/products/single-product'>
                     <img
                       src='https://m.media-amazon.com/images/I/719ZywAmvOL._AC_AA180_.jpg'
                       alt=''

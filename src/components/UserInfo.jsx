@@ -15,28 +15,28 @@ const UserInfo = ({ username }) => {
         </div>
         <p className={userinfocss.top_links_text}>Top links for you</p>
         <div className={userinfocss.top_links}>
-          <Link className={userinfocss.top_links_box}>
+          <Link className={userinfocss.top_links_box} to='/'>
             <img
               src='https://m.media-amazon.com/images/G/01/HUD/Dashboard/ProfileCard/orders._AC_SR120,80_.png'
               alt='Your Orders'
             />
             <p>Your Orders</p>
           </Link>
-          <Link className={userinfocss.top_links_box}>
+          <Link className={userinfocss.top_links_box} to='/'>
             <img
               src='https://m.media-amazon.com/images/G/31/HUD/Dashboard/ProfileCard/976419031._AC_SR120,80_.png'
               alt='Mobiles and Accessories'
             />
             <p>Mobiles and Accesories</p>
           </Link>
-          <Link className={userinfocss.top_links_box}>
+          <Link className={userinfocss.top_links_box} to='/'>
             <img
               src='https://m.media-amazon.com/images/G/31/HUD/Dashboard/ProfileCard/6648217031._AC_SR120,80_.png'
               alt='Fashion'
             />
             <p>Fashion</p>
           </Link>
-          <Link className={userinfocss.top_links_box}>
+          <Link className={userinfocss.top_links_box} to='/'>
             <img
               src='https://m.media-amazon.com/images/G/31/HUD/Dashboard/ProfileCard/2454178031._AC_SR120,80_.png'
               alt='Grocery'
@@ -54,7 +54,7 @@ const UserInfo = ({ username }) => {
           src='https://images-eu.ssl-images-amazon.com/images/G/31/img19/AmazonPay/Boson/Sid/CCBP/DesktopGateway_CategoryCard_379x304_CCBP._SY304_CB413372299_.jpg'
           alt=''
         />
-        <Link className={userinfocss.bills_pay} href='/'>
+        <Link className={userinfocss.bills_pay} to='/'>
           Pay Now
         </Link>
       </div>

@@ -7,6 +7,7 @@ import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Products from './components/Products';
 import Cart from './components/Cart';
+import SingleProduct from './components/SingleProduct';
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -23,6 +24,9 @@ const App = () => {
         <Switch>
           <Route path='/cart'>
             <Cart items={[{}]} />
+          </Route>
+          <Route path='/products/single-product'>
+            <SingleProduct />
           </Route>
           <Route path='/products/asus-store'>
             <Products storePoint='asus' />
