@@ -1,0 +1,132 @@
+.user_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+
+.user_info_box {
+  background-color: white;
+  margin: 1rem;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: var(--header-bgcolor);
+}
+
+.personal_detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.personal_detail img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+}
+
+.personal_detail p {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 0 1rem;
+}
+
+.top_links_text {
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin: 0.625rem 0;
+}
+
+.top_links {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 0.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.top_links_box {
+  background-color: #f2fafb;
+  width: 180px;
+  padding: 0.625rem;
+  text-decoration: none;
+  color: inherit;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.top_links_box:hover,
+.top_links_box:focus {
+  -webkit-transform: scale(1.014);
+  -ms-transform: scale(1.014);
+  transform: scale(1.014);
+}
+
+.top_links_box img {
+  width: 100%;
+  height: auto;
+  mix-blend-mode: multiply;
+}
+
+.top_links_box p {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.bills_heading {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.bills_image {
+  width: 60%;
+  max-height: 20.25rem;
+  margin-bottom: 1rem;
+}
+
+.bills_pay {
+  text-decoration: none;
+  color: inherit;
+  background-color: var(--search-icon-bgcolor);
+  padding: 0.75rem 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.bills_pay:active,
+.bills_pay:hover,
+.bills_pay:focus {
+  background-color: var(--header-bgcolor);
+  color: white;
+}

@@ -5,7 +5,7 @@ import StarIcon from '@material-ui/icons/Star';
 import Button from '@material-ui/core/Button';
 import AddBoxIcon from '@material-ui/icons/AddBox';
 import DeleteIcon from '@material-ui/icons/Delete';
-import productcss from '../../css/home/Product.module.css';
+import productcss from '../css/Product.module.css';
 import { Link } from 'react-router-dom';
 
 const Product = ({ name, currency, amount, ratings, image, buttonText }) => {

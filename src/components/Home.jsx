@@ -1,15 +1,16 @@
 import React from 'react';
 import SliderImages from './SliderImages';
-import Products from './Products';
-
-import homecss from '../../css/home/Home.module.css';
+import homecss from '../css/Home.module.css';
+import Stores from './Stores';
+import UserInfo from './UserInfo';
 
 const Home = () => {
   return (
     <section className={homecss.home}>
       <div className={homecss.home_container}>
         <SliderImages />
-        <Products />
+        <UserInfo />
+        <Stores />
       </div>
     </section>
   );

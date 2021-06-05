@@ -2,7 +2,7 @@
   "name": "amazon-clone",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "serve": "vite preview"
   },
@@ -12,6 +12,7 @@
     "react": "^17.0.2",
     "react-alice-carousel": "^2.5.1",
     "react-dom": "^17.0.2",
+    "react-number-format": "^4.6.0",
     "react-router-dom": "^5.2.0",
     "react-simple-image-slider": "^2.1.0"
   },
