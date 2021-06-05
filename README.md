@@ -25,12 +25,12 @@ This project aims to clone all necessary essential features of Amazon.
 
 > #### Home Section
 
-- [] Page will contain 4 different store blocks from 2nd row onwards which will redirect to their products listing page.
-- [] The first row will contain amazon.in like 4 boxes containing user info or 2 boxes with essential info of user.
+- [x] Page will contain 4 different store blocks from 2nd row onwards which will redirect to their products listing page.
+- [x] The first row will contain amazon.in like 4 boxes containing user info or 2 boxes with essential info of user.
 
 > #### Products Listing page
 
-- [] Based on the product store, the products will be listed in 4 boxes and 2 rows [6 products]
+- [x] Based on the product store, the products will be listed in 3 boxes and 2 rows [6 products]
 - [] Each product will be clickable and route to Single Product Page
 - [] Add/Remove to/from Cart feature will be available for quick adding.
 
@@ -43,6 +43,9 @@ This project aims to clone all necessary essential features of Amazon.
 - [] Rating and Review System
 
 > #### Cart page
+
+- [x] 2 side layout will be made. One side to list products in cart, another to display subtotal.
+- [] Interactivity and state management through context api will be used.
 
 > #### Checkout Feature Using Stripe
 
