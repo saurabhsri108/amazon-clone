@@ -7,7 +7,7 @@ const Store = ({ name, image, buttonText }) => {
   return (
     <Link
       to={`/products/${name.split(' ').join('-').toLowerCase()}`}
-      storePoint={`${name.split(' ').join('-').toLowerCase()}`}
+      storepoint={`${name.split(' ').join('-').toLowerCase()}`}
     >
       <section className={storecss.store}>
         <div className={storecss.info}>

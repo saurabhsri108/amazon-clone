@@ -3,9 +3,17 @@ import NumberFormat from 'react-number-format';
 import cartcss from '../css/Cart.module.css';
 import { Link } from 'react-router-dom';
 import ShoppingCarts from './ShoppingCarts';
+import { useStateValue } from './StateProvider';
+import { v4 as uuidv4 } from 'uuid';
 
-const Cart = ({ items }) => {
-  const totalItems = items.length;
+const Cart = () => {
+  const [{ basket }] = useStateValue();
+  const totalItems = basket?.length;
+
+  const subtotal = basket.reduce((subtotal, singleBasket) => {
+    return subtotal + parseFloat(singleBasket.amount);
+  }, 0.0);
+
   return (
     <section className={cartcss.cart_section}>
       <div className={cartcss.cart_content}>
@@ -33,7 +41,11 @@ const Cart = ({ items }) => {
           {totalItems !== 0 && (
             <div className={cartcss.filled}>
               <h2>Shopping Cart</h2>
-              <ShoppingCarts showSubtotal={false} />
+              <ShoppingCarts
+                key={uuidv4()}
+                showSubtotal={false}
+                subtotal={subtotal}
+              />
             </div>
           )}
         </div>
@@ -47,11 +59,11 @@ const Cart = ({ items }) => {
           </div>
           <div className={cartcss.cart_subtotal_content}>
             <p>
-              Subtotal (0 items):{' '}
+              Subtotal ({basket?.length} items):{' '}
               <strong>
                 <NumberFormat
                   decimalScale={2}
-                  value={2499}
+                  value={subtotal}
                   thousandsGroupStyle={'lakh'}
                   displayType={'text'}
                   thousandSeparator={true}

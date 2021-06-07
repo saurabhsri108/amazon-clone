@@ -4,8 +4,12 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import headercss from '../css/Header.module.css';
 import { Link } from 'react-router-dom';
+import { useStateValue } from './StateProvider';
 
 const Header = ({ isLoggedIn, setIsLoggedIn }) => {
+  const [{ basket }] = useStateValue();
+  const totalItems = basket?.length;
+
   let signInContent = (
     <>
       <p className={headercss.navigation_option_uppertext}>Hello, Sign in</p>
@@ -82,7 +86,9 @@ const Header = ({ isLoggedIn, setIsLoggedIn }) => {
           <p className={headercss.navigation_option_lowertext}>&amp; Orders</p>
         </div>
         <Link to='/cart' className={headercss.navigation_option}>
-          <span className={headercss.navigation_option_cart_num}>0</span>
+          <span className={headercss.navigation_option_cart_num}>
+            {totalItems}
+          </span>
           <ShoppingCartIcon className={headercss.cart_icon} />
           <span className={headercss.navigation_option_cart_text}>Cart</span>
         </Link>

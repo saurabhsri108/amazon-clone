@@ -7,8 +7,28 @@ import AddBoxIcon from '@material-ui/icons/AddBox';
 import DeleteIcon from '@material-ui/icons/Delete';
 import productcss from '../css/Product.module.css';
 import { Link } from 'react-router-dom';
+import { useStateValue } from './StateProvider';
+import { v4 as uuidv4 } from 'uuid';
 
-const Product = ({ name, currency, amount, ratings, image, buttonText }) => {
+const Product = ({
+  id,
+  name,
+  currency,
+  amount,
+  ratings,
+  image,
+  buttonText,
+}) => {
+  const [{ basket }, dispatch] = useStateValue();
+
+  const addProductToBasket = () => {
+    // Dispatch to basket
+    dispatch({
+      type: 'ADD_TO_BASKET',
+      item: { id, name, currency, amount, ratings, image },
+    });
+  };
+
   return (
     <section className={productcss.product}>
       <div className={productcss.info}>
@@ -17,7 +37,7 @@ const Product = ({ name, currency, amount, ratings, image, buttonText }) => {
           {Array(ratings)
             .fill()
             .map((star) => {
-              return <StarIcon />;
+              return <StarIcon key={uuidv4()} />;
             })}
         </div>
         <p>
@@ -31,6 +51,7 @@ const Product = ({ name, currency, amount, ratings, image, buttonText }) => {
       </div>
       <div className={productcss.btnadd}>
         <Button
+          onClick={addProductToBasket}
           variant='contained'
           startIcon={<AddBoxIcon />}
           // startIcon={<DeleteIcon />}

@@ -1,6 +1,7 @@
 import React from 'react';
 import Product from './Product';
 import productcss from '../css/Product.module.css';
+import { v4 as uuidv4 } from 'uuid';
 
 const GrocProducts = () => {
   return (
@@ -8,6 +9,8 @@ const GrocProducts = () => {
       <h1 className={productcss.main_heading}>Groceries</h1>
       <div className={productcss.product_row}>
         <Product
+          key={uuidv4()}
+          id={uuidv4()}
           name='Aashirvaad Select Premium Sharbati Atta, 5kg'
           currency='₹'
           amount='239.00'
@@ -16,6 +19,8 @@ const GrocProducts = () => {
           buttonText='Add to Cart'
         />
         <Product
+          key={uuidv4()}
+          id={uuidv4()}
           name='Amazon Brand - Vedaka Premium Toor Dal, 1kg'
           currency='₹'
           amount='132.00'
@@ -24,6 +29,8 @@ const GrocProducts = () => {
           buttonText='Add to Cart'
         />
         <Product
+          key={uuidv4()}
+          id={uuidv4()}
           name='Sunfeast Dark Fantasy Choco Fills, 600g'
           currency='₹'
           amount='160.00'
@@ -34,6 +41,8 @@ const GrocProducts = () => {
       </div>
       <div className={productcss.product_row}>
         <Product
+          key={uuidv4()}
+          id={uuidv4()}
           name='Amazon Brand - Solimo Premium Almonds, 500g'
           currency='₹'
           amount='458.00'
@@ -42,6 +51,8 @@ const GrocProducts = () => {
           buttonText='Add to Cart'
         />
         <Product
+          key={uuidv4()}
+          id={uuidv4()}
           name='Aashirvaad Svasti Ghee, 1L'
           currency='₹'
           amount='546.00'
@@ -50,6 +61,8 @@ const GrocProducts = () => {
           buttonText='Add to Cart'
         />
         <Product
+          key={uuidv4()}
+          id={uuidv4()}
           name='Dhara Rice Bran Oil, 5l with Free 1Kg Sugar'
           currency='₹'
           amount='880.00'

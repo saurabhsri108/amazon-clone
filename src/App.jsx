@@ -23,19 +23,19 @@ const App = () => {
         <Header isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedInHandler} />
         <Switch>
           <Route path='/cart'>
-            <Cart items={[{}]} />
+            <Cart />
           </Route>
-          <Route path='/products/single-product'>
+          {/* <Route path='/products/single-product'>
             <SingleProduct />
-          </Route>
+          </Route> */}
           <Route path='/products/asus-store'>
-            <Products storePoint='asus' />
+            <Products storepoint='asus' />
           </Route>
           <Route path='/products/acer-store'>
-            <Products storePoint='acer' />
+            <Products storepoint='acer' />
           </Route>
           <Route path='/products/groceries'>
-            <Products storePoint='groceries' />
+            <Products storepoint='groceries' />
           </Route>
           <Route path='/'>
             <Home />

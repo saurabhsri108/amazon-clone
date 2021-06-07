@@ -1,6 +1,7 @@
 import React from 'react';
 import Product from './Product';
 import productcss from '../css/Product.module.css';
+import { v4 as uuidv4 } from 'uuid';
 
 const AsusProducts = () => {
   return (
@@ -8,6 +9,8 @@ const AsusProducts = () => {
       <h1 className={productcss.main_heading}>Asus Laptops</h1>
       <div className={productcss.product_row}>
         <Product
+          key={uuidv4()}
+          id={uuidv4()}
           name='ASUS ROG Zephyrus G14 (2021), 14" (35.56 cms) FHD 144Hz, Ryzen 7 5800HS, RTX 3060 6GB Graphics, Gaming Laptop (16GB/1TB SSD/Office 2019/Windows 10/Moonlight White/AniMe Matrix/1.7 Kg), GA401QM-HZ146TS'
           currency='₹'
           amount='1,41,990.00'
@@ -16,6 +19,8 @@ const AsusProducts = () => {
           buttonText='Add to Cart'
         />
         <Product
+          key={uuidv4()}
+          id={uuidv4()}
           name='ASUS ROG Zephyrus G14 (2021), 14" (35.56 cms) FHD 144Hz, Ryzen 7 5800HS, GTX 1650 4GB Graphics, Gaming Laptop (8GB/512GB SSD/Office 2019/Windows 10/Moonlight White/AniMe Matrix/1.6 Kg), GA401QH-BM070TS'
           currency='₹'
           amount='94,990.00'
@@ -24,6 +29,8 @@ const AsusProducts = () => {
           buttonText='Add to Cart'
         />
         <Product
+          key={uuidv4()}
+          id={uuidv4()}
           name='ASUS ROG Zephyrus G14 (2021), 14" (35.56 cms) FHD 144Hz, Ryzen 9 5900HS, RTX 3060 6GB Graphics, Gaming Laptop (16GB/1TB SSD/Office 2019/Windows 10/Moonlight White/AniMe Matrix/1.7 Kg), GA401QM-HZ269TS'
           currency='₹'
           amount='1,50,990.00'
@@ -34,6 +41,8 @@ const AsusProducts = () => {
       </div>
       <div className={productcss.product_row}>
         <Product
+          key={uuidv4()}
+          id={uuidv4()}
           name='ASUS ROG Zephyrus G14 (2021), 14" (35.56 cms) FHD 144Hz, Ryzen 7 5800HS, RTX 3060 6GB Graphics, Gaming Laptop (16GB/1TB SSD/Office 2019/Windows 10/Eclipse Gray/AniMe Matrix/1.7 Kg), GA401QM-HZ146TS'
           currency='₹'
           amount='1,41,990.00'
@@ -42,6 +51,8 @@ const AsusProducts = () => {
           buttonText='Add to Cart'
         />
         <Product
+          key={uuidv4()}
+          id={uuidv4()}
           name='ASUS ROG Zephyrus G14 (2021), 14" (35.56 cms) FHD 144Hz, Ryzen 7 5800HS, GTX 1650 4GB Graphics, Gaming Laptop (8GB/512GB SSD/Office 2019/Windows 10/Eclipse Gray/AniMe Matrix/1.6 Kg), GA401QH-BM070TS'
           currency='₹'
           amount='94,990.00'
@@ -50,6 +61,8 @@ const AsusProducts = () => {
           buttonText='Add to Cart'
         />
         <Product
+          key={uuidv4()}
+          id={uuidv4()}
           name='ASUS ROG Zephyrus G14 (2021), 14" (35.56 cms) FHD 144Hz, Ryzen 9 5900HS, RTX 3060 6GB Graphics, Gaming Laptop (16GB/1TB SSD/Office 2019/Windows 10/Eclipse Gray/AniMe Matrix/1.7 Kg), GA401QM-HZ269TS'
           currency='₹'
           amount='1,50,990.00'
