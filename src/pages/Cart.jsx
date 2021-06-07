@@ -2,8 +2,8 @@ import React from 'react';
 import NumberFormat from 'react-number-format';
 import cartcss from '../css/Cart.module.css';
 import { Link } from 'react-router-dom';
-import ShoppingCarts from './ShoppingCarts';
-import { useStateValue } from './StateProvider';
+import ShoppingCarts from '../components/ShoppingCarts';
+import { useStateValue } from '../components/StateProvider';
 import { v4 as uuidv4 } from 'uuid';
 
 const Cart = () => {

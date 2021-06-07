@@ -1,8 +1,8 @@
 import React from 'react';
 import productcss from '../css/Product.module.css';
-import AsusProducts from './AsusProducts';
-import AcerProducts from './AcerProducts';
-import GrocProducts from './GrocProducts';
+import AsusProducts from '../pages/AsusProducts';
+import AcerProducts from '../pages/AcerProducts';
+import GrocProducts from '../pages/GrocProducts';
 
 const Products = ({ storepoint }) => {
   return (

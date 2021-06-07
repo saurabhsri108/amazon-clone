@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
-import Home from './components/Home';
+import Home from './pages/Home';
 import Footer from './components/Footer';
 
 import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Products from './components/Products';
-import Cart from './components/Cart';
+import Cart from './pages/Cart';
 import SingleProduct from './components/SingleProduct';
 
 const App = () => {

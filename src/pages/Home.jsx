@@ -1,8 +1,8 @@
 import React from 'react';
-import SliderImages from './SliderImages';
+import SliderImages from '../components/SliderImages';
 import homecss from '../css/Home.module.css';
-import Stores from './Stores';
-import UserInfo from './UserInfo';
+import Stores from '../components/Stores';
+import UserInfo from '../components/UserInfo';
 
 const Home = () => {
   return (
