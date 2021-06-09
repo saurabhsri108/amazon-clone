@@ -15,8 +15,6 @@
   -webkit-box-flex: 2;
   -ms-flex: 2;
   flex: 2;
-  background-color: var(--header-font-color);
-  padding: 1rem;
 }
 
 .cart_items h2 {
@@ -209,6 +207,13 @@
 .buy_button:focus,
 .buy_button:active {
   background-color: hsl(51deg 100% 45%);
+}
+
+.empty,
+.filled {
+  background-color: var(--header-font-color);
+  padding: 1rem;
+  margin-bottom: 2rem;
 }
 
 .empty .item_list {

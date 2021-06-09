@@ -5,16 +5,23 @@ import LocationOnIcon from '@material-ui/icons/LocationOn';
 import headercss from '../css/Header.module.css';
 import { Link } from 'react-router-dom';
 import { useStateValue } from './StateProvider';
+import { totalItems } from './Reducer';
+import { auth } from '../firebase';
 
-const Header = ({ isLoggedIn, setIsLoggedIn }) => {
-  const [{ basket }] = useStateValue();
-  const totalItems = basket?.length;
+const Header = () => {
+  const [{ basket, user }] = useStateValue();
+
+  const isLoggedIn = user ? true : false;
+
+  const logoutHandler = () => {
+    if (isLoggedIn) auth.signOut();
+  };
 
   let signInContent = (
-    <>
+    <Link to='/login'>
       <p className={headercss.navigation_option_uppertext}>Hello, Sign in</p>
       <p className={headercss.navigation_option_lowertext}>Guest</p>
-    </>
+    </Link>
   );
 
   let signInAddress = (
@@ -26,10 +33,12 @@ const Header = ({ isLoggedIn, setIsLoggedIn }) => {
 
   if (isLoggedIn) {
     signInContent = (
-      <>
+      <Link onClick={logoutHandler}>
         <p className={headercss.navigation_option_uppertext}>Welcome back</p>
-        <p className={headercss.navigation_option_lowertext}>Saurabh</p>
-      </>
+        <p className={headercss.navigation_option_lowertext}>
+          {user.displayName ?? user.email}
+        </p>
+      </Link>
     );
     signInAddress = (
       <>
@@ -40,7 +49,7 @@ const Header = ({ isLoggedIn, setIsLoggedIn }) => {
   }
 
   return (
-    <header className={headercss.header} id='#header-top'>
+    <header className={headercss.header}>
       <div className={headercss.amazon_logo}>
         <Link to='/' className={headercss.logo}>
           <img
@@ -78,16 +87,14 @@ const Header = ({ isLoggedIn, setIsLoggedIn }) => {
             alt='USA Flag Image'
           /> */}
         </div>
-        <div className={headercss.navigation_option} onClick={setIsLoggedIn}>
-          {signInContent}
-        </div>
+        <div className={headercss.navigation_option}>{signInContent}</div>
         <div className={headercss.navigation_option}>
           <p className={headercss.navigation_option_uppertext}>Returns</p>
           <p className={headercss.navigation_option_lowertext}>&amp; Orders</p>
         </div>
         <Link to='/cart' className={headercss.navigation_option}>
           <span className={headercss.navigation_option_cart_num}>
-            {totalItems}
+            {totalItems(basket)}
           </span>
           <ShoppingCartIcon className={headercss.cart_icon} />
           <span className={headercss.navigation_option_cart_text}>Cart</span>

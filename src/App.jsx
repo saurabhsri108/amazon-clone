@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from './components/Header';
 import Home from './pages/Home';
 import Footer from './components/Footer';
@@ -7,21 +7,40 @@ import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Products from './components/Products';
 import Cart from './pages/Cart';
-import SingleProduct from './components/SingleProduct';
+import SingleProduct from './pages/SingleProduct';
+import Login from './components/Login';
+import { auth } from './firebase';
+import { useStateValue } from './components/StateProvider';
 
 const App = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [{}, dispatch] = useStateValue();
 
-  const setIsLoggedInHandler = () => {
-    console.log(isLoggedIn);
-    setIsLoggedIn((prevIsLoggedIn) => !prevIsLoggedIn);
-  };
+  useEffect(() => {
+    auth.onAuthStateChanged((authUser) => {
+      if (authUser) {
+        // the user just logged in / the user was logged in
+        dispatch({
+          type: 'SET_USER',
+          user: authUser,
+        });
+      } else {
+        // the user logged out
+        dispatch({
+          type: 'SET_USER',
+          user: null,
+        });
+      }
+    });
+  }, []);
 
   return (
     <BrowserRouter>
       <main className='app'>
-        <Header isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedInHandler} />
+        <Header />
         <Switch>
+          <Route path='/login'>
+            <Login />
+          </Route>
           <Route path='/cart'>
             <Cart />
           </Route>

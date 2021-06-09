@@ -6,7 +6,7 @@ import UserInfo from '../components/UserInfo';
 
 const Home = () => {
   return (
-    <section className={homecss.home}>
+    <section className={homecss.home} id='#header-top'>
       <div className={homecss.home_container}>
         <SliderImages />
         <UserInfo />

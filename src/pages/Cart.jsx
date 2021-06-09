@@ -3,22 +3,17 @@ import NumberFormat from 'react-number-format';
 import cartcss from '../css/Cart.module.css';
 import { Link } from 'react-router-dom';
 import ShoppingCarts from '../components/ShoppingCarts';
+import { subtotal, totalItems } from '../components/Reducer';
 import { useStateValue } from '../components/StateProvider';
-import { v4 as uuidv4 } from 'uuid';
 
 const Cart = () => {
-  const [{ basket }] = useStateValue();
-  const totalItems = basket?.length;
-
-  const subtotal = basket.reduce((subtotal, singleBasket) => {
-    return subtotal + parseFloat(singleBasket.amount);
-  }, 0.0);
+  const [{ basket, savedBasket }] = useStateValue();
 
   return (
     <section className={cartcss.cart_section}>
       <div className={cartcss.cart_content}>
         <div className={cartcss.cart_items}>
-          {totalItems === 0 && (
+          {totalItems(basket) === 0 && (
             <div className={cartcss.empty}>
               <div className={cartcss.item_list}>
                 <div className={cartcss.item_list_img}>
@@ -38,14 +33,16 @@ const Cart = () => {
               </div>
             </div>
           )}
-          {totalItems !== 0 && (
+          {totalItems(basket) !== 0 && (
             <div className={cartcss.filled}>
               <h2>Shopping Cart</h2>
-              <ShoppingCarts
-                key={uuidv4()}
-                showSubtotal={false}
-                subtotal={subtotal}
-              />
+              <ShoppingCarts showSubtotal={true} basket={basket} />
+            </div>
+          )}
+          {totalItems(savedBasket) !== 0 && (
+            <div className={cartcss.filled}>
+              <h2>Saved Cart Items</h2>
+              <ShoppingCarts showSubtotal={false} basket={savedBasket} />
             </div>
           )}
         </div>
@@ -59,11 +56,11 @@ const Cart = () => {
           </div>
           <div className={cartcss.cart_subtotal_content}>
             <p>
-              Subtotal ({basket?.length} items):{' '}
+              Subtotal ({totalItems(basket)} items):{' '}
               <strong>
                 <NumberFormat
                   decimalScale={2}
-                  value={subtotal}
+                  value={subtotal(basket)}
                   thousandsGroupStyle={'lakh'}
                   displayType={'text'}
                   thousandSeparator={true}
