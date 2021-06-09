@@ -1,41 +1,60 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from './components/Header';
-import Home from './components/Home';
+import Home from './pages/Home';
 import Footer from './components/Footer';
 
 import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Products from './components/Products';
-import Cart from './components/Cart';
-import SingleProduct from './components/SingleProduct';
+import Cart from './pages/Cart';
+import SingleProduct from './pages/SingleProduct';
+import Login from './components/Login';
+import { auth } from './firebase';
+import { useStateValue } from './components/StateProvider';
 
 const App = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [{}, dispatch] = useStateValue();
 
-  const setIsLoggedInHandler = () => {
-    console.log(isLoggedIn);
-    setIsLoggedIn((prevIsLoggedIn) => !prevIsLoggedIn);
-  };
+  useEffect(() => {
+    auth.onAuthStateChanged((authUser) => {
+      if (authUser) {
+        // the user just logged in / the user was logged in
+        dispatch({
+          type: 'SET_USER',
+          user: authUser,
+        });
+      } else {
+        // the user logged out
+        dispatch({
+          type: 'SET_USER',
+          user: null,
+        });
+      }
+    });
+  }, []);
 
   return (
     <BrowserRouter>
       <main className='app'>
-        <Header isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedInHandler} />
+        <Header />
         <Switch>
+          <Route path='/login'>
+            <Login />
+          </Route>
           <Route path='/cart'>
-            <Cart items={[{}]} />
+            <Cart />
           </Route>
-          <Route path='/products/single-product'>
+          {/* <Route path='/products/single-product'>
             <SingleProduct />
-          </Route>
+          </Route> */}
           <Route path='/products/asus-store'>
-            <Products storePoint='asus' />
+            <Products storepoint='asus' />
           </Route>
           <Route path='/products/acer-store'>
-            <Products storePoint='acer' />
+            <Products storepoint='acer' />
           </Route>
           <Route path='/products/groceries'>
-            <Products storePoint='groceries' />
+            <Products storepoint='groceries' />
           </Route>
           <Route path='/'>
             <Home />

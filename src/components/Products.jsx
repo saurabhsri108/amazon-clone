@@ -1,15 +1,15 @@
 import React from 'react';
 import productcss from '../css/Product.module.css';
-import AsusProducts from './AsusProducts';
-import AcerProducts from './AcerProducts';
-import GrocProducts from './GrocProducts';
+import AsusProducts from '../pages/AsusProducts';
+import AcerProducts from '../pages/AcerProducts';
+import GrocProducts from '../pages/GrocProducts';
 
-const Products = ({ storePoint }) => {
+const Products = ({ storepoint }) => {
   return (
     <section className={productcss.products}>
-      {storePoint === 'asus' && <AsusProducts />}
-      {storePoint === 'acer' && <AcerProducts />}
-      {storePoint === 'groceries' && <GrocProducts />}
+      {storepoint === 'asus' && <AsusProducts />}
+      {storepoint === 'acer' && <AcerProducts />}
+      {storepoint === 'groceries' && <GrocProducts />}
     </section>
   );
 };

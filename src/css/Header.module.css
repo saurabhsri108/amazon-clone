@@ -133,6 +133,11 @@
   color: white !important;
 }
 
+.navigation_option a {
+  text-decoration: none;
+  color: white;
+}
+
 .navigation_option:focus,
 .navigation_option:hover,
 .navigation_option:active {

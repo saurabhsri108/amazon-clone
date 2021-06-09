@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import footercss from '../css/Footer.module.css';
 
 const Footer = () => {
   return (
     <footer className={footercss.footer}>
-      <a href='#header-top' className={footercss.top}>
+      <Link to='/' className={footercss.top}>
         <p>Back to top</p>
-      </a>
+      </Link>
       <section className={footercss.middle}>
         <div>
           <p>Get to Know Us</p>

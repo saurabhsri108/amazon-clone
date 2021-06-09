@@ -2,15 +2,18 @@ import React from 'react';
 import NumberFormat from 'react-number-format';
 import cartcss from '../css/Cart.module.css';
 import { Link } from 'react-router-dom';
-import ShoppingCarts from './ShoppingCarts';
+import ShoppingCarts from '../components/ShoppingCarts';
+import { subtotal, totalItems } from '../components/Reducer';
+import { useStateValue } from '../components/StateProvider';
 
-const Cart = ({ items }) => {
-  const totalItems = items.length;
+const Cart = () => {
+  const [{ basket, savedBasket }] = useStateValue();
+
   return (
     <section className={cartcss.cart_section}>
       <div className={cartcss.cart_content}>
         <div className={cartcss.cart_items}>
-          {totalItems === 0 && (
+          {totalItems(basket) === 0 && (
             <div className={cartcss.empty}>
               <div className={cartcss.item_list}>
                 <div className={cartcss.item_list_img}>
@@ -30,10 +33,16 @@ const Cart = ({ items }) => {
               </div>
             </div>
           )}
-          {totalItems !== 0 && (
+          {totalItems(basket) !== 0 && (
             <div className={cartcss.filled}>
               <h2>Shopping Cart</h2>
-              <ShoppingCarts showSubtotal={false} />
+              <ShoppingCarts showSubtotal={true} basket={basket} />
+            </div>
+          )}
+          {totalItems(savedBasket) !== 0 && (
+            <div className={cartcss.filled}>
+              <h2>Saved Cart Items</h2>
+              <ShoppingCarts showSubtotal={false} basket={savedBasket} />
             </div>
           )}
         </div>
@@ -47,11 +56,11 @@ const Cart = ({ items }) => {
           </div>
           <div className={cartcss.cart_subtotal_content}>
             <p>
-              Subtotal (0 items):{' '}
+              Subtotal ({totalItems(basket)} items):{' '}
               <strong>
                 <NumberFormat
                   decimalScale={2}
-                  value={2499}
+                  value={subtotal(basket)}
                   thousandsGroupStyle={'lakh'}
                   displayType={'text'}
                   thousandSeparator={true}
