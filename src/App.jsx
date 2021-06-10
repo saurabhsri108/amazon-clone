@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Header from './components/Header';
 import Home from './pages/Home';
 import Footer from './components/Footer';
@@ -7,7 +7,6 @@ import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Products from './components/Products';
 import Cart from './pages/Cart';
-import SingleProduct from './pages/SingleProduct';
 import Login from './components/Login';
 import { auth } from './firebase';
 import { useStateValue } from './components/StateProvider';
@@ -44,9 +43,6 @@ const App = () => {
           <Route path='/cart'>
             <Cart />
           </Route>
-          {/* <Route path='/products/single-product'>
-            <SingleProduct />
-          </Route> */}
           <Route path='/products/asus-store'>
             <Products storepoint='asus' />
           </Route>
