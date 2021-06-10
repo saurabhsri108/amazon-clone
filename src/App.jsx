@@ -13,7 +13,6 @@ import { useStateValue } from './components/StateProvider';
 
 const App = () => {
   const [{}, dispatch] = useStateValue();
-
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
       if (authUser) {
