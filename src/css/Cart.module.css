@@ -1,0 +1,247 @@
+.cart_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.cart_items {
+  -webkit-box-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}
+
+.cart_items h2 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding-bottom: 0.625rem;
+}
+
+.prices {
+  text-align: right;
+  border-bottom: 2px solid #dddddd;
+  padding-top: 1rem;
+}
+
+.prices:last-child {
+  border-bottom: none;
+}
+
+.item_list {
+  border-bottom: 2px solid #dddddd;
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.item_list_img {
+  width: 11.25rem;
+  height: 11.25rem;
+}
+
+.item_list_img img {
+  width: 100%;
+}
+
+.item_list_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+}
+
+.item_list_content_prices {
+  font-weight: bold;
+  width: 100%;
+  text-align: right;
+}
+
+.item_list_content_details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.3125rem;
+  width: 400%;
+}
+
+.item_list_content_details a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.item_list_content_details a:hover,
+.item_list_content_details a:focus,
+.item_list_content_details a:active {
+  text-decoration: underline;
+  -webkit-text-decoration-color: darkred;
+  text-decoration-color: darkred;
+}
+
+.item_list_content_details a h3 {
+  font-weight: 600;
+}
+
+.stock_status {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: darkgreen;
+}
+
+.subtotal_gift {
+}
+
+.item_buttons {
+  margin-top: 1rem;
+}
+
+.item_buttons select {
+  margin-right: 1rem;
+}
+
+.item_buttons button {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: darkblue;
+  cursor: pointer;
+}
+
+.item_buttons button:last-child {
+  margin-left: 1rem;
+}
+
+.item_buttons button:hover,
+.item_buttons button:focus,
+.item_buttons button:active {
+  text-decoration: underline;
+}
+
+.cart_subtotal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cart_subtotal > * > img {
+  width: 300px;
+  height: auto;
+  margin: auto;
+}
+
+.cart_subtotal > *:first-child {
+  text-align: center;
+}
+
+.cart_subtotal > * {
+  background-color: white;
+  padding: 0.625rem;
+}
+
+.cart_subtotal_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  gap: 0.625rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.cart_subtotal_content p {
+  font-size: 1.2rem;
+}
+
+.subtotal_gift {
+  margin-top: -0.3125rem;
+}
+
+.buy_button {
+  width: 100%;
+  cursor: pointer;
+  padding: 0.625rem;
+  font-size: 0.8rem;
+  border-radius: 0.3rem;
+  border: none;
+  background-color: hsl(51deg 100% 50%);
+  font-weight: 600;
+}
+
+.buy_button:hover,
+.buy_button:focus,
+.buy_button:active {
+  background-color: hsl(51deg 100% 45%);
+}
+
+.empty,
+.filled {
+  background-color: var(--header-font-color);
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.empty .item_list {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+}
+.empty .item_list h2 {
+  font-weight: bold;
+}
+.empty .item_list_content {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.empty .item_list_content a {
+  text-decoration: none;
+  color: orange;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+.empty .item_list_content a:hover,
+.empty .item_list_content a:active,
+.empty .item_list_content a:focus {
+  color: orangered;
+  -webkit-text-decoration-color: orangered;
+  text-decoration-color: orangered;
+  text-decoration: underline;
+}
