@@ -38,6 +38,16 @@ const AcerProducts = () => {
           image='https://images-na.ssl-images-amazon.com/images/I/81EiTAEiBxL._SL1500_.jpg'
           buttonText='Add to Cart'
         />
+        <Product
+          key={uuidv4()}
+          id={uuidv4()}
+          name='Acer Nitro 5 Intel Core i5-11th Generation 144 Hz Refresh Rate 15.6-inch (39.62 cms) Gaming Laptop (8GB Ram/512 GB SSD/Win10/GTX 1650 Graphics/Obsidian Black/2.2 Kgs), AN515-56 + Xbox Game Pass for PC'
+          currency='₹'
+          amount='69,990.00'
+          ratings={5}
+          image='https://images-na.ssl-images-amazon.com/images/I/71evs2WKJjS._SL1500_.jpg'
+          buttonText='Add to Cart'
+        />
       </div>
       <div className={productcss.product_row}>
         <Product
@@ -58,6 +68,16 @@ const AcerProducts = () => {
           amount='69,990.00'
           ratings={5}
           image='https://images-na.ssl-images-amazon.com/images/I/71evs2WKJjS._SL1500_.jpg'
+          buttonText='Add to Cart'
+        />
+        <Product
+          key={uuidv4()}
+          id={uuidv4()}
+          name='Acer Predator Triton Intel i5 10th Gen 15.6" (39.62cms) FHD IPS 144 Hz Display Full Metal Thin & Light Gaming Laptop (8GB RAM/512GB SSD/Win10/GTX 1650Ti Graphics/19.9mm Thin/Abyssal Black), PT315-52'
+          currency='₹'
+          amount='76,990.00'
+          ratings={4}
+          image='https://images-na.ssl-images-amazon.com/images/I/81EiTAEiBxL._SL1500_.jpg'
           buttonText='Add to Cart'
         />
         <Product

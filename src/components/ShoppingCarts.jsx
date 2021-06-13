@@ -1,24 +1,28 @@
-import React from 'react';
-import cartcss from '../css/Cart.module.css';
-import { Link } from 'react-router-dom';
-import NumberFormat from 'react-number-format';
-import { useStateValue } from './StateProvider';
-import { v4 as uuidv4 } from 'uuid';
-import { subtotal, totalItems } from './Reducer';
+import React from "react";
+import cartcss from "../css/Cart.module.css";
+import { Link } from "react-router-dom";
+import NumberFormat from "react-number-format";
+import { useStateValue } from "./StateProvider";
+import { v4 as uuidv4 } from "uuid";
+import { subtotal, totalItems } from "./Reducer";
 
-const ShoppingCarts = ({ showSubtotal, basket }) => {
+const ShoppingCarts = ({ showSubtotal, basket, paymentPage, orderPage }) => {
   const [{}, dispatch] = useStateValue();
+
+  const refundHandler = (basketId) => {
+    return;
+  };
 
   const deleteFromCartHandler = (basketId) => {
     dispatch({
-      type: 'REMOVE_FROM_BASKET',
+      type: "REMOVE_FROM_BASKET",
       id: basketId,
     });
   };
 
   const deleteFromSavedCartHandler = (basketId) => {
     dispatch({
-      type: 'REMOVE_FROM_SAVED_BASKET',
+      type: "REMOVE_FROM_SAVED_BASKET",
       id: basketId,
     });
   };
@@ -27,7 +31,7 @@ const ShoppingCarts = ({ showSubtotal, basket }) => {
     deleteFromCartHandler(basket.id);
 
     dispatch({
-      type: 'SAVE_FOR_LATER',
+      type: "SAVE_FOR_LATER",
       newBasket: basket,
     });
   };
@@ -36,7 +40,7 @@ const ShoppingCarts = ({ showSubtotal, basket }) => {
     deleteFromSavedCartHandler(basket.id);
 
     dispatch({
-      type: 'MOVE_TO_CART',
+      type: "MOVE_TO_CART",
       newBasket: basket,
     });
   };
@@ -49,44 +53,72 @@ const ShoppingCarts = ({ showSubtotal, basket }) => {
 
   return (
     <>
-      <p className={cartcss.prices}>Prices</p>
+      <p
+        className={`${cartcss.prices} ${paymentPage ? cartcss.pay_prices : ""}`}
+      >
+        Prices
+      </p>
       {basket.map((singleBasket) => {
         return (
           <div key={uuidv4()}>
-            <div className={cartcss.item_list}>
+            <div
+              className={`${cartcss.item_list} ${
+                paymentPage ? cartcss.pay_item_list : ""
+              }`}
+            >
               <div className={cartcss.item_list_img}>
-                <Link to='/products/single-product'>
-                  <img src={singleBasket.image} alt='Product Image' />
+                <Link to="/products/single-product">
+                  <img src={singleBasket.image} alt="Product" />
                 </Link>
               </div>
               <div className={cartcss.item_list_content}>
                 <div className={cartcss.item_list_content_details}>
-                  <Link to='/products/single-product'>
+                  <Link to="/products/single-product">
                     <h3>{singleBasket.name}</h3>
                   </Link>
                   <p>
                     <small className={cartcss.stock_status}>In Stock</small>
                   </p>
-                  <p>
+                  {/* <p>
                     <small className={cartcss.subtotal_gift}>
                       <input type='checkbox' /> This order contains a gift
                     </small>
-                  </p>
+                  </p> */}
                   <div className={cartcss.item_buttons}>
-                    {showSubtotal && (
+                    {showSubtotal && !paymentPage && !orderPage && (
                       <select
-                        name='quantity'
-                        id='quantity'
+                        name="quantity"
+                        id="quantity"
                         onChange={cartQuantityHandler}
                       >
-                        <option value='1'>1</option>
-                        <option value='2'>2</option>
-                        <option value='3'>3</option>
-                        <option value='4'>4</option>
-                        <option value='5'>5</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
                       </select>
                     )}
-                    {showSubtotal && (
+                    {showSubtotal && paymentPage && !orderPage && (
+                      <>
+                        <button
+                          onClick={() => deleteFromCartHandler(singleBasket.id)}
+                          style={{ marginLeft: 0 }}
+                        >
+                          Remove From Basket
+                        </button>
+                      </>
+                    )}
+                    {orderPage && (
+                      <>
+                        <button
+                          onClick={() => refundHandler(singleBasket.id)}
+                          style={{ marginLeft: 0 }}
+                        >
+                          Refund
+                        </button>
+                      </>
+                    )}
+                    {showSubtotal && !paymentPage && !orderPage && (
                       <>
                         <button
                           onClick={() => deleteFromCartHandler(singleBasket.id)}
@@ -100,7 +132,7 @@ const ShoppingCarts = ({ showSubtotal, basket }) => {
                         </button>
                       </>
                     )}
-                    {!showSubtotal && (
+                    {!showSubtotal && !paymentPage && (
                       <>
                         <button
                           onClick={() =>
@@ -120,8 +152,8 @@ const ShoppingCarts = ({ showSubtotal, basket }) => {
                   <NumberFormat
                     decimalScale={2}
                     value={singleBasket.amount}
-                    thousandsGroupStyle={'lakh'}
-                    displayType={'text'}
+                    thousandsGroupStyle={"lakh"}
+                    displayType={"text"}
                     thousandSeparator={true}
                     prefix={`${singleBasket.currency} `}
                     fixedDecimalScale={true}
@@ -134,13 +166,14 @@ const ShoppingCarts = ({ showSubtotal, basket }) => {
       })}
       {showSubtotal && (
         <p className={cartcss.prices}>
-          Subtotal ({totalItems(basket)} items):{' '}
+          {paymentPage ? "Order Total" : "Subtotal"} ({totalItems(basket)}{" "}
+          items):{" "}
           <strong>
             <NumberFormat
               decimalScale={2}
               value={subtotal(basket)}
-              thousandsGroupStyle={'lakh'}
-              displayType={'text'}
+              thousandsGroupStyle={"lakh"}
+              displayType={"text"}
               thousandSeparator={true}
               prefix={`₹ `}
               fixedDecimalScale={true}

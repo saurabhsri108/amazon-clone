@@ -38,6 +38,16 @@ const GrocProducts = () => {
           image='https://images-na.ssl-images-amazon.com/images/I/81nvWgzLWEL._SL1500_.jpg'
           buttonText='Add to Cart'
         />
+        <Product
+          key={uuidv4()}
+          id={uuidv4()}
+          name='Aashirvaad Svasti Ghee, 1L'
+          currency='₹'
+          amount='546.00'
+          ratings={3}
+          image='https://images-na.ssl-images-amazon.com/images/I/71B5qacE2hS._SL1500_.jpg'
+          buttonText='Add to Cart'
+        />
       </div>
       <div className={productcss.product_row}>
         <Product
@@ -68,6 +78,16 @@ const GrocProducts = () => {
           amount='880.00'
           ratings={4}
           image='https://images-na.ssl-images-amazon.com/images/I/61BFNLvQD-S._SL1001_.jpg'
+          buttonText='Add to Cart'
+        />
+        <Product
+          key={uuidv4()}
+          id={uuidv4()}
+          name='Sunfeast Dark Fantasy Choco Fills, 600g'
+          currency='₹'
+          amount='160.00'
+          ratings={4}
+          image='https://images-na.ssl-images-amazon.com/images/I/81nvWgzLWEL._SL1500_.jpg'
           buttonText='Add to Cart'
         />
       </div>

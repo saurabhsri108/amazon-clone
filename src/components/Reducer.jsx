@@ -6,7 +6,7 @@ export const initialState = {
 
 export const subtotal = (basket) =>
   basket?.reduce(
-    (total, item) => total + parseFloat(item.amount.replaceAll(',', '')),
+    (total, item) => total + parseFloat(item.amount.replaceAll(",", "")),
     0.0
   );
 
@@ -14,13 +14,16 @@ export const totalItems = (basket) => basket?.length;
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case 'ADD_TO_BASKET':
+    case "ADD_TO_BASKET":
       return {
         ...state,
         basket: [action.item, ...state.basket],
       };
 
-    case 'REMOVE_FROM_BASKET':
+    case "EMPTY_BASKET":
+      return { ...state, basket: [] };
+
+    case "REMOVE_FROM_BASKET":
       const index = state.basket.findIndex(
         (basketItem) => basketItem.id === action.id
       );
@@ -35,7 +38,7 @@ const reducer = (state, action) => {
         basket: newBasket,
       };
 
-    case 'REMOVE_FROM_SAVED_BASKET':
+    case "REMOVE_FROM_SAVED_BASKET":
       const index2 = state.savedBasket.findIndex(
         (basketItem) => basketItem.id === action.id
       );
@@ -49,17 +52,17 @@ const reducer = (state, action) => {
         savedBasket: newBasket2,
       };
 
-    case 'SAVE_FOR_LATER':
+    case "SAVE_FOR_LATER":
       return {
         ...state,
         savedBasket: [action.newBasket, ...state.savedBasket],
       };
 
-    case 'MOVE_TO_CART':
+    case "MOVE_TO_CART":
       console.log(action.newBasket);
       return { ...state, basket: [action.newBasket, ...state.basket] };
 
-    case 'SET_USER':
+    case "SET_USER":
       return {
         ...state,
         user: action.user,

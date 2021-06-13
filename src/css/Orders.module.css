@@ -1,0 +1,63 @@
+.h1 {
+  font-weight: 600;
+  text-align: center;
+  background-color: var(--footer-middle-bgcolor);
+  color: var(--footer-font-color);
+  padding: 2rem 0;
+  margin-bottom: 1rem;
+}
+
+.orders_list {
+  max-width: 1140px;
+  margin: auto;
+}
+
+.order_items {
+  background-color: white;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.order_items h4 {
+  font-weight: 600;
+  font-size: 1.4rem;
+  padding: 0.625rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+}
+
+.order_items h4 span {
+  background-color: wheat;
+  font-size: 1rem;
+  padding: 0.325rem;
+  border-radius: 0.2rem;
+}
+
+.date {
+  font-size: 1.125rem;
+  font-weight: bold;
+  background-color: antiquewhite;
+  padding: 0.625rem;
+  border-radius: 0.2rem;
+}
+
+.order_items_details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}

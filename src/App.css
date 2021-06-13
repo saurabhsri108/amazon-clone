@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  background-color: #eaeded;
+  background-color: var(--body-bgcolor);
 }
 
 .alice-carousel {

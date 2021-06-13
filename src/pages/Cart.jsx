@@ -1,13 +1,14 @@
 import React from 'react';
 import NumberFormat from 'react-number-format';
 import cartcss from '../css/Cart.module.css';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import ShoppingCarts from '../components/ShoppingCarts';
 import { subtotal, totalItems } from '../components/Reducer';
 import { useStateValue } from '../components/StateProvider';
 
 const Cart = () => {
   const [{ basket, savedBasket }] = useStateValue();
+  const history = useHistory();
 
   return (
     <section className={cartcss.cart_section}>
@@ -72,7 +73,12 @@ const Cart = () => {
             <small className={cartcss.subtotal_gift}>
               <input type='checkbox' /> This order contains a gift
             </small>
-            <button className={cartcss.buy_button}>Proceed to Buy</button>
+            <button
+              className={cartcss.buy_button}
+              onClick={() => history.push('/payment')}
+            >
+              Proceed to Buy
+            </button>
           </div>
         </div>
       </div>

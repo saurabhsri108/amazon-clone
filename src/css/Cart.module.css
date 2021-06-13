@@ -33,6 +33,10 @@
   border-bottom: none;
 }
 
+.pay_prices {
+  display: none;
+}
+
 .item_list {
   border-bottom: 2px solid #dddddd;
   padding: 1rem 0;
@@ -43,6 +47,10 @@
   -ms-flex-align: start;
   align-items: flex-start;
   gap: 1rem;
+}
+
+.pay_item_list:nth-child(1) {
+  /* background-color: red; */
 }
 
 .item_list_img {
