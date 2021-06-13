@@ -19,7 +19,7 @@ import Orders from "./pages/Orders";
 const promise = loadStripe("pk_test_GGA4vSAelVuo40d1tnwnHZdU00glJZPfWf");
 
 const App = () => {
-  const [{}, dispatch] = useStateValue();
+  const [, dispatch] = useStateValue();
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
       if (authUser) {

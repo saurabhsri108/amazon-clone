@@ -7,7 +7,7 @@ import { v4 as uuidv4 } from "uuid";
 import { subtotal, totalItems } from "./Reducer";
 
 const ShoppingCarts = ({ showSubtotal, basket, paymentPage, orderPage }) => {
-  const [{}, dispatch] = useStateValue();
+  const [, dispatch] = useStateValue();
 
   const refundHandler = (basketId) => {
     return;
@@ -47,7 +47,7 @@ const ShoppingCarts = ({ showSubtotal, basket, paymentPage, orderPage }) => {
 
   const cartQuantityHandler = (e) => {
     e.preventDefault();
-    const quantity = parseInt(e.target.value);
+    // const quantity = parseInt(e.target.value);
     // Handle change quantity feature in future
   };
 

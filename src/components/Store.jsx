@@ -1,20 +1,20 @@
-import React from 'react';
-import Button from '@material-ui/core/Button';
-import storecss from '../css/Stores.module.css';
-import { Link } from 'react-router-dom';
+import React from "react";
+// import Button from '@material-ui/core/Button';
+import storecss from "../css/Stores.module.css";
+import { Link } from "react-router-dom";
 
 const Store = ({ name, image, buttonText }) => {
   return (
     <Link
-      to={`/products/${name.split(' ').join('-').toLowerCase()}`}
-      storepoint={`${name.split(' ').join('-').toLowerCase()}`}
+      to={`/products/${name.split(" ").join("-").toLowerCase()}`}
+      storepoint={`${name.split(" ").join("-").toLowerCase()}`}
     >
       <section className={storecss.store}>
         <div className={storecss.info}>
           <h2 className={storecss.heading}>{name}</h2>
         </div>
         <div className={storecss.img_container}>
-          <img src={image} alt={`${name} Image`} />
+          <img src={image} alt={`${name}`} />
         </div>
         <div className={storecss.btnadd}>
           <h3>{buttonText}</h3>

@@ -42,7 +42,7 @@ const Payment = () => {
     setProcessing(true);
 
     // get the client secret
-    const payload = await stripe
+    await stripe
       .confirmCardPayment(clientSecret, {
         payment_method: {
           card: elements.getElement(CardElement),
@@ -104,7 +104,10 @@ const Payment = () => {
           <h4>Payment Section</h4>
           <div className={paymentcss.payment_items}>
             <form onSubmit={submitPaymentHandler}>
-              <CardElement onChange={cardChangeHandler} />
+              <CardElement
+                onChange={cardChangeHandler}
+                className={paymentcss.cardElement}
+              />
               <h5>
                 Order total:{" "}
                 <NumberFormat
@@ -117,7 +120,10 @@ const Payment = () => {
                   fixedDecimalScale={true}
                 />
               </h5>
-              <button disabled={processing || disabled || succeeded}>
+              <button
+                className={paymentcss.paynow}
+                disabled={processing || disabled || succeeded}
+              >
                 <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
               </button>
               {error && <div>{error}</div>}
