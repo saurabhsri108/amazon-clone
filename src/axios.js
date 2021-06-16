@@ -1,7 +1,9 @@
-import axios from "axios";
+import axios from "axios"
 
 const instance = axios.create({
-  baseURL: "http://127.0.0.1:5001/clone-22598/us-central1/api", // THE API (cloud function) URL
-});
+  baseURL: "https://vasudeveloper.com/amazon-clone/api", // THE API (cloud function) URL
+  // https://vasudeveloper.com/amazon-clone
+  // http://localhost:5000/
+})
 
-export default instance;
+export default instance
