@@ -8,7 +8,7 @@ const UserInfo = ({ username }) => {
       <div className={userinfocss.user_info_box}>
         <div className={userinfocss.personal_detail}>
           <img
-            src='https://pbs.twimg.com/profile_images/1396153561239547904/0_HZUXo2_400x400.jpg'
+            src='https://pbs.twimg.com/profile_images/1404778668468039688/MkSOe8Mv_400x400.jpg'
             alt='Profile Pic'
           />
           <p>Hi, {username || 'Guest'}</p>
